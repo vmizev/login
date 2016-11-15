@@ -3,6 +3,14 @@ window.addEventListener('load', function () {
 	var btn = document.getElementById('get-cookie');
 	var setUser = document.getElementById('set-user');	
 
+	function setCookie() {
+		var res = encodeURIComponent(getUserName.value);
+		document.cookie = 'login='+ res + ';max-age=100;';
+		var writeCookie = findCookieValue('login');
+		setUser.innerHTML = writeCookie;
+		// console.log(writeCookie);
+	}	
+
 	function findCookieValue(cookieName){
 		var allCookies = document.cookie;
 		var pos = allCookies.indexOf(cookieName + '=');
@@ -19,14 +27,5 @@ window.addEventListener('load', function () {
 			return decodeURIComponent(value);
 		}
 	}
-
-	function setCookie() {
-		var res = encodeURIComponent(getUserName.value);
-		document.cookie = 'login='+ res + ';max-age=100;';
-		var writeCookie = findCookieValue('login');
-		setUser.innerHTML = writeCookie;
-		// console.log(writeCookie);
-	}	
-
 	btn.onclick = setCookie;				
 })
