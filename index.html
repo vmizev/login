@@ -1,0 +1,165 @@
+
+    <div class="wrapper">
+      <!-- HEADER START -->
+      <header class="page-header navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar">
+              <div class="logo">
+                <a href="index.html">GetYourPanel</a>
+              </div>
+              <div class="mobile_btn">
+                    <a href="#" class="btn-navbar navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar" aria-expanded="false" title="">
+                        <i class="fa fa-bars"></i>
+                    </a>
+              </div>
+              
+              <ul class="nav navbar-nav navbar-right pull-right">
+                  <li><span class="balance hidden-xs"></span><span>$0.00</span></li>
+                  <li class="dropdown-wrapper">
+                      <a href="#settings-drop"><i class="fa fa-user" aria-hidden="true"></i> <span id="set-user">dmgame</span> </a>
+                      <ul class="dropmenu" id="settings-drop">
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Settings</span></a></li>
+                        <li><a href="#"><i class="fa fa-power-off" aria-hidden="true"></i><span>Logout</span></a></li>
+                      </ul>
+                  </li>
+              </ul>
+            
+              
+          </div>
+        </div>
+      </header>
+      <!-- HEADER END -->
+
+      <div class="content_container">
+        <!-- SIDEBAR MENU START -->
+        <nav id="sidebar" class="sidebar fix-width">
+          <ul id="side-nav" class="side-nav">
+              <li class="active">
+                  <a href="index.html"><i class="fa fa-dashboard"></i><span class="name">New order</span></a>
+              </li>
+              <li class="treeview-menu">
+                  <a href="" class="dropdown-toggle" ><i class="fa fa-edit"></i><span class="name">Mass order</span><i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="submenu">
+                    <li><a href="massorder.html"><i class="fa fa-circle-o"></i> <span>Simple form</span></a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> <span>Regular form</span></a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> <span>Extended form</span></a></li>
+                  </ul>
+              </li>
+              <li class="">
+                  <a href="servicelist.html"><i class="fa fa-list" aria-hidden="true"></i><span class="name">Service list</span></a>
+              </li>
+              <li class="">
+                  <a href="ordershistory.html"><i class="fa fa-history" aria-hidden="true"></i><span class="name">Orders history</span></a>
+              </li>
+              <li class="">
+                  <a href="addfunds.html"><i class="fa fa-plus-circle" aria-hidden="true"></i><span class="name">Add funds</span></a>
+              </li>
+              <li class="">
+                  <a href="faq.html"><i class="fa fa-book"></i><span class="name">FAQ</span></a>
+              </li>
+              <li class="">
+                  <a href="api.html"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span class="name">API</span></a>
+              </li>
+              <li class="alarm">
+                  <a href="tickets.html"><i class="fa fa-comments" aria-hidden="true"></i><span class="name">Tickets</span> <small class="pull-right bg-red"></small></a>
+              </li>
+          </ul>
+        </nav>
+        <!-- SIDEBAR MENU END -->
+
+        <!-- CONTENT START -->
+        <div class="container-fluid m-t-15">
+          <div class="row">
+            <div class="container-change margin-change fix-margin">
+              <div class="col-md-8 col-xs-12 animated">
+                <div class="content-header">
+                  <h3>New order</h3>
+                </div>
+
+                <div class="form-block box">
+                  <div class="panel panel-default m-b-md">
+                    <div class="panel-body">
+                      <form method="post" action="/">
+
+                        <div class="form-group">
+                          <label class="control-label" for="OrderService">Service</label>
+                          <select name="Order[service]" id="OrderService" class=" select-full">
+                            <option value="1" selected="">Facebook</option>
+                            <option value="3">Instagram</option>
+                            <option value="2">Twitter</option>
+                            <option value="6">Types</option>
+                            <option value="0">Other</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label" for="OrderService">Service</label>
+                          <select name="Order[service]" id="OrderService" class="select-full">
+                              <option value="1">Default</option>
+                              <option value="2">SEO</option>
+                              <option value="3">Custom Comments</option>
+                              <option value="4">Mentions with Hashtags Mentions with HashtagsMentions with Hashtags Mentions with Hashtags Mentions with Hashtags Mentions with Hashtags Mentions with Hashtags</option>
+                              <option value="5">Mentions Custom List</option>
+                              <option value="6">Mentions Hashtag</option>
+                              <option value="7">Mentions User Followers</option>
+                              <option value="8">Mentions Media Likers</option>
+                              <option value="9">Mentions</option>
+                              <option value="10">Package</option>
+                              <option value="11">Default - 1</option>
+                              <option value="12">SEO - 1</option>
+                              <option value="13">Custom Comments - 1</option>
+                              <option value="14">Mentions with Hashtags - 1</option>
+                              <option value="15">Mentions Custom List - 1</option>
+                              <option value="16">Mentions Hashtag - 1</option>
+                              <option value="17">Mentions User Followers - 1</option>
+                              <option value="18">Mentions Media Likers - 1</option>
+                              <option value="19">Package - 1</option>
+                              <option value="20">Mentions - 1</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label" for="link">Link</label>
+                          <input class="form-control" name="Order[link]" value="" type="text">
+                        </div>
+
+
+                        <div class="form-group" id="order_quantity">
+                          <label class="control-label" for="quantity">Quantity</label>
+                          <input type="text" class="form-control" id="order_count" name="Order[quantity]" value="">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="order_text_container box box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, qui ducimus iste. Consectetur, quibusdam dolore dolores voluptate inventore optio consequatur, quas ad facere vitae distinctio atque laudantium odio, autem quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fugit facilis animi modi culpa, ratione amet repellendus illo dolores voluptas possimus. Impedit incidunt commodi corrupti, repudiandae praesentium, ducimus mollitia ex.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- CONTENT END -->  
+      </div> 
+    </div>
+     
+        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Custom plugins -->
+    <script src="js/change-container-width.js"></script>
+    <script src="js/jquery.formstyler.js"></script>
+    <script>
+      (function($) {
+        $(function() {
+
+          $('select').styler({
+            selectSmartPositioning: false,
+          });
+
+        });
+        })(jQuery);
+    </script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>Log In</title>
+
+		<!-- Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700,400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		
+		<!-- General style -->
+		<link href="css/default-light.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="login-box">
+			<!-- HEADER START -->
+			<header class="page-header navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar">
+						<div class="logo">
+							<a href="index.html">GetYourPanel</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- HEADER END -->
+			<div class="content_container">
+				<!-- CONTENT START -->
+				<div class="container-fluid m-t-15">
+					<div class="row">
+						<div class="login-box">
+							<div class="form-block">
+								<div class="panel panel-default m-b-md">
+									<div class="panel-body">
+										<p class="login-box-msg">Sign in to start your session</p>
+										<form method="post" action="/">
+											<div class="form-group">
+												<label class="control-label" for="username">Username</label>
+												<input type="text" name="login[username]" class="form-control" id="username">
+												<span class="fa fa-envelope form-control-feedback"></span>
+											</div>
+											<button type="submit" class="btn btn-primary" id="get-cookie">Log In</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- CONTENT END -->
+			</div>
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		</div>
+		<div class="load-content">
+
+		</div>
+				
+
+		<script>
+			$('.btn-primary').on('click', function(event){
+				event.preventDefault()
+				$('.login-box').fadeOut('slow');
+				setTimeout(function () {
+					$('.load-content').load('index.html')
+				}, 1000)
+			})
+		</script>
+		<script src="js/magic-login.js"></script>
+	</body>
+</html>
